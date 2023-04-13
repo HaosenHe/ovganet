@@ -12,11 +12,12 @@ Author(s): Haosen He, Alison Morantz
 You can use the `devtools` package to install **ovganet**. If you don't have `devtools` installed, you can install it by running the following code:
 
 ```R
-install.packages("devtools")
+install.packages("devtools", repos = "http://cran.us.r-project.org")
 ```
 
 Then go ahead and install **ovganet** from GitHub:
 
 ```R
+library(devtools)
 devtools::install_github("HaosenHe/ovganet")
 ```
