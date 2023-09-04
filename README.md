@@ -6,7 +6,7 @@ Author(s): Haosen He, Alison Morantz
 
 ## Installation
 
-You can use the `devtools` package to install **ovganet**. If you don't have `devtools` installed, you can install it by running the following code:
+You can install **ovganet** using the `devtools` package. If you don't have `devtools` installed, you may install it by running the following in R:
 
 ```
 install.packages("devtools", repos = "http://cran.us.r-project.org")
@@ -34,14 +34,14 @@ And a test data set:
 data(mtcars)
 ```
 
-Convert the data set to desired formats:
+Convert the data set to the desired formats:
 
 ```         
 X <- as.matrix(mtcars[,-1])
 y <- as.vector(mtcars$mpg)
 ```
 
-Define an overlapping group (numbers represent column numbers in X)
+Define a list of overlapping groups (numbers represent column numbers in X)
 
 ```         
 group = list(c(1,2), c(2,3), c(3,4,5),c(4,5,6))
