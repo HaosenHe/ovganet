@@ -6,7 +6,7 @@ Author(s): Haosen He, Alison Morantz
 
 ## Installation:
 
-You can install **ovganet** using the `devtools` package. If you don't have `devtools` installed, you may install it by running the following in R:
+You can install `ovganet` using the `devtools` package. If you don't have `devtools` installed, you may install it by running the following in R:
 
 ```
 install.packages("devtools", repos = "http://cran.us.r-project.org")
