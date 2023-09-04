@@ -1,3 +1,9 @@
+---
+title: "ovganet documentation"
+author: Haosen He
+date: March 7, 2023
+output: md_document
+---
 # Overlapping Group Elastic Net Using the Orthogonalizing EM (OEM) Algorithm
 
 ## Introduction

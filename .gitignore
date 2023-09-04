@@ -2,3 +2,5 @@
 .Rhistory
 /.Rproj.user
 test.Rmd
+README.Rmd
+.DS_Store
