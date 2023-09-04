@@ -16,7 +16,7 @@ cv.ovganet(
 )
 }
 \arguments{
-\item{X}{Design matrix (features). Note that "oem" is optimized for n » p settings.}
+\item{X}{Design matrix (features). Note that the "oem" package we use is optimized for n » p settings.}
 
 \item{y}{Response vector (outcomes).}
 
@@ -34,11 +34,14 @@ The default is type.measure = "deviance." See package "oem" for more options.}
 \item{...}{other parameters to be passed to "cv.ovganet" function.}
 }
 \value{
-An object with S3 class "cv.oem" (same as cv.oem output).
+An object with S3 class "cv.ovganet".
 }
 \description{
 Cross-validated overlapping group elastic net using package 'oem'
 }
 \examples{
-To be filled in.
+library(doMC)
+library(ovganet)
+registerDoMC(5)
+cv_overlap_grp_lasso <- cv.ovganet(X = X, y = y, group = group, weights = group_weights, family ='binomial', parallel = TRUE)
 }

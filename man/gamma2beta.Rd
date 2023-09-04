@@ -21,6 +21,3 @@ A vector of lasso coefficients.
 \description{
 Convert latent variable coefficients (gammas) to variable coefficients (betas)
 }
-\examples{
-To be filled in.
-}

@@ -17,6 +17,3 @@ A sparse matrix with all latent variables included
 \description{
 Expand a matrix of predictors to a matrix of latent variables.
 }
-\examples{
-To be filled in.
-}

@@ -3,8 +3,6 @@
 #' @param X Design matrix (features).
 #' @param group A list of vectors containing group information.
 #' @return A sparse matrix with all latent variables included
-#' @examples
-#' To be filled in.
 #' @import Matrix
 #' @import oem
 #' @export
@@ -32,8 +30,6 @@ expandMat <- function(X, group) { # Expand X to augmented matrix with latent var
 #' @param grp.vec A vector indicating group membership
 #' @param family "gaussian" for least squares problems and "binomial" for binary response.
 #' @return A vector of lasso coefficients.
-#' @examples
-#' To be filled in.
 #' @import Matrix
 #' @import oem
 #' @export

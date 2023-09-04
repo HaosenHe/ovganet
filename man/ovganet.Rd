@@ -30,11 +30,12 @@ ovganet(
 \item{...}{other parameters to be passed to "cv.ovganet" function.}
 }
 \value{
-An object with S3 class "cv.oem" (same as cv.oem output).
+An object with S3 class "ovganet".
 }
 \description{
 Overlapping group elastic net using package 'oem'
 }
 \examples{
-To be filled in.
+library(ovganet)
+overlap_grp_lasso <- ovganet(X = X, y = y, group = group, weights = group_weights, family ='binomial')
 }

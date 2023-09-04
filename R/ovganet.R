@@ -7,9 +7,10 @@
 #' @param alpha Mixing value for elastic.net.
 #' @param family Use "gaussian" for least squares problems and "binomial" for binary response.
 #' @param ... other parameters to be passed to "cv.ovganet" function.
-#' @return An object with S3 class "cv.oem" (same as cv.oem output).
+#' @return An object with S3 class "ovganet".
 #' @examples
-#' To be filled in.
+#' library(ovganet)
+#' overlap_grp_lasso <- ovganet(X = X, y = y, group = group, weights = group_weights, family ='binomial')
 #' @import Matrix
 #' @import oem
 #' @export
@@ -35,7 +36,7 @@ ovganet <- function(X, y,
   if (storage.mode(X)=="integer") X <- 1.0*X
 
   # Check weights
-  if (is.null(weights)) weights <- sqrt(table(group))
+  if (is.null(weights)) weights <- sqrt(lengths(group))
 
   # Format latent groups
   incid.mat <- incidenceMat(X, group) # incidence matrix
@@ -56,6 +57,7 @@ ovganet <- function(X, y,
   fit$group <- group
   fit$grp.vec <- grp.vec
   fit$weights <- weights
+  class(fit) <- "ovganet"
 
   fit
 }
