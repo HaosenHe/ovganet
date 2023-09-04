@@ -74,3 +74,5 @@ plot(cvfit)
 ```
 
 ![](README_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+
+For more information, please refer to the user manual in the GitHub repository.
