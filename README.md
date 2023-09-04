@@ -1,10 +1,10 @@
-## Introduction
+## Introduction:
 
-**ovganet** is an R package that fits overlapping group elastic nets using the latent group lasso approach [(Obozinski et al., 2011)](https://arxiv.org/abs/1110.0413). Our package is an extension of the [oem](https://github.com/jaredhuling/oem) package developed by [Huling, J.D. and Chien, P.](https://arxiv.org/abs/1801.09661), based on [Xiong, S. et al., 2016](https://www.tandfonline.com/doi/full/10.1080/00401706.2015.1054436). Certain parts of our code are adapted from [grpregOverlap](https://github.com/YaohuiZeng/grpregOverlap).
+`ovganet` is an R package that fits overlapping group elastic nets using the latent group lasso approach [(Obozinski et al., 2011)](https://arxiv.org/abs/1110.0413). Our package is an extension of the [oem](https://github.com/jaredhuling/oem) package developed by [Huling, J.D. and Chien, P.](https://arxiv.org/abs/1801.09661), based on [Xiong, S. et al., 2016](https://www.tandfonline.com/doi/full/10.1080/00401706.2015.1054436). Certain parts of our code are adapted from [grpregOverlap](https://github.com/YaohuiZeng/grpregOverlap).
 
 Author(s): Haosen He, Alison Morantz
 
-## Installation
+## Installation:
 
 You can install **ovganet** using the `devtools` package. If you don't have `devtools` installed, you may install it by running the following in R:
 
@@ -20,7 +20,7 @@ library(devtools)
 devtools::install_github("HaosenHe/ovganet")
 ```
 
-### Get Started
+## Demonstration:
 
 Let's first import the package:
 
