@@ -59,7 +59,9 @@ Plot the path plot:
 plot(fit)
 ```
 
-![](README_files/figure-markdown_strict/unnamed-chunk-8-1.png) Fit cross-validated model:
+![](README_files/figure-markdown_strict/unnamed-chunk-8-1.png) 
+
+Fit a cross-validated model:
 
 ```         
 cvfit <- cv.ovganet(X = X, y = y, group = group, family ='gaussian')
