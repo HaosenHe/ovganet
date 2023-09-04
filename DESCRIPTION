@@ -1,10 +1,10 @@
 Package: ovganet
 Type: Package
-Title: Overlapping Group Adaptive Elastic Net
-Version: 0.1.0
+Title: Overlapping Group Elastic Net Using OEM
+Version: 1.0.0
 Author: Haosen He, Alison Morantz
 Maintainer: Haosen He <hehaosen@law.stanford.edu>
-Description: Performs (overlapping) (grouped) elastic net regularization 
+Description: Performs (overlapping) (group) elastic net regularization 
     for linear and binomial models using Orthogonalizing EM with flexible options for
     penalization.
 Depends:
