@@ -36,9 +36,7 @@ An object with S3 class "ovganet".
 Overlapping group elastic net using package 'oem'
 }
 \examples{
-library(doMC)
 library(ovganet)
-registerDoMC(5)
 data(mtcars)
 X <- as.matrix(mtcars[,-1])
 y <- as.vector(mtcars$mpg)
