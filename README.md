@@ -1,3 +1,5 @@
+# ovganet - Overlapping Group Elastic Net
+
 ## Introduction:
 
 `ovganet` is an R package that fits overlapping group elastic nets using the latent group lasso approach [(Obozinski et al., 2011)](https://arxiv.org/abs/1110.0413). Our package is an extension of the [oem](https://github.com/jaredhuling/oem) package developed by [Huling, J.D. and Chien, P.](https://arxiv.org/abs/1801.09661), based on [Xiong, S. et al., 2016](https://www.tandfonline.com/doi/full/10.1080/00401706.2015.1054436). Certain parts of our code are adapted from [grpregOverlap](https://github.com/YaohuiZeng/grpregOverlap).
