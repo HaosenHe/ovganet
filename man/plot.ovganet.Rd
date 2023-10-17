@@ -9,7 +9,7 @@
 \arguments{
 \item{obj}{An object of class 'ovganet'}
 
-\item{...}{Additional arguments to be passed to the plot function of 'plot.oem'}
+\item{...}{Additional arguments passed to the plot function of 'plot.oem'}
 }
 \description{
 Plot method for ovganet plotting (coef. path)

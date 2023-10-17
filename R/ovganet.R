@@ -6,11 +6,17 @@
 #' @param weights A vector of weights for each group.
 #' @param alpha Mixing value for elastic.net.
 #' @param family Use "gaussian" for least squares problems and "binomial" for binary response.
-#' @param ... other parameters to be passed to "cv.ovganet" function.
+#' @param ... other parameters passed to "cv.ovganet" function.
 #' @return An object with S3 class "ovganet".
 #' @examples
+#' library(doMC)
 #' library(ovganet)
-#' overlap_grp_lasso <- ovganet(X = X, y = y, group = group, weights = group_weights, family ='binomial')
+#' registerDoMC(5)
+#' data(mtcars)
+#' X <- as.matrix(mtcars[,-1])
+#' y <- as.vector(mtcars$mpg)
+#' group = list(c(1,2), c(2,3), c(3,4,5),c(4,5,6))
+#' fit <- ovganet(X = X, y = y, group = group, family ='gaussian')
 #' @import Matrix
 #' @import oem
 #' @export
@@ -30,7 +36,7 @@ ovganet <- function(X, y,
   if (is.matrix(X)) {
     tmp <- try(X <- as.matrix(X), silent=TRUE)
     if (class(tmp)[1] == "try-error")  {
-      stop("X must be a matrix or able to be coerced to a matrix")
+      stop("X must be a matrix or able  coerced to a matrix")
     }
   }
   if (storage.mode(X)=="integer") X <- 1.0*X
@@ -61,3 +67,4 @@ ovganet <- function(X, y,
 
   fit
 }
+

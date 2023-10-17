@@ -1,6 +1,6 @@
 #' Cross-validated overlapping group elastic net using package 'oem'
 #'
-#' @param X Design matrix (features). Note that the "oem" package we use is optimized for n » p settings.
+#' @param X Design matrix (features). Note that the "oem" package we use is optimized for n >> p settings.
 #' @param y Response vector (outcomes).
 #' @param group A list of vectors containing group information.
 #' @param weights A vector of weights for each group.
@@ -8,13 +8,17 @@
 #' @param type.measure Measure to evaluate for cross-validation.
 #'  The default is type.measure = "deviance." See package "oem" for more options.
 #' @param family Use "gaussian" for least squares problems and "binomial" for binary response.
-#' @param ... other parameters to be passed to "cv.ovganet" function.
+#' @param ... other parameters passed to "cv.ovganet" function.
 #' @return An object with S3 class "cv.ovganet".
 #' @examples
 #' library(doMC)
 #' library(ovganet)
 #' registerDoMC(5)
-#' cv_overlap_grp_lasso <- cv.ovganet(X = X, y = y, group = group, weights = group_weights, family ='binomial', parallel = TRUE)
+#' data(mtcars)
+#' X <- as.matrix(mtcars[,-1])
+#' y <- as.vector(mtcars$mpg)
+#' group = list(c(1,2), c(2,3), c(3,4,5),c(4,5,6))
+#' cvfit <- cv.ovganet(X = X, y = y, group = group, family ='gaussian')
 #' @import Matrix
 #' @import oem
 #' @export
@@ -36,7 +40,7 @@ cv.ovganet <- function(X, y,
   if (is.matrix(X)) {
     tmp <- try(X <- as.matrix(X), silent=TRUE)
     if (class(tmp)[1] == "try-error")  {
-      stop("X must be a matrix or able to be coerced to a matrix")
+      stop("X must be a matrix or able coerced to a matrix")
     }
   }
   if (storage.mode(X)=="integer") X <- 1.0*X
@@ -74,3 +78,4 @@ cv.ovganet <- function(X, y,
   class(cvfit) <- "cv.ovganet"
   cvfit
 }
+

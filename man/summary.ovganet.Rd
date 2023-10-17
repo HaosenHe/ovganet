@@ -9,7 +9,7 @@ summary.ovganet(obj, ...)
 \arguments{
 \item{obj}{An obj of class 'ovganet'}
 
-\item{...}{Additional arguments to be passed to the summary function of 'summary.oem'}
+\item{...}{Additional arguments passed to the summary function of 'summary.oem'}
 }
 \value{
 A summary obj for 'ovganet'

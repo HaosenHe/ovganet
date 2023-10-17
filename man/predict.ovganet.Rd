@@ -11,7 +11,7 @@
 
 \item{newx}{New data to predict from. If not provided, will use the data from the original fit.}
 
-\item{...}{Additional arguments to be passed to the predict function of 'predict.oem'}
+\item{...}{Additional arguments passed to the predict function of 'predict.oem'}
 }
 \value{
 Predicted values based on the 'ovganet' object

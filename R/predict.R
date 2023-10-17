@@ -2,7 +2,7 @@
 #'
 #' @param obj An object of class 'ovganet'
 #' @param newx New data to predict from. If not provided, will use the data from the original fit.
-#' @param ... Additional arguments to be passed to the predict function of 'predict.oem'
+#' @param ... Additional arguments passed to the predict function of 'predict.oem'
 #' @return Predicted values based on the 'ovganet' object
 #' @export
 predict.ovganet <- function(obj, newx, ...) {
@@ -21,7 +21,7 @@ predict.ovganet <- function(obj, newx, ...) {
 #'
 #' @param obj An object of class 'cv.ovganet'
 #' @param newx New data to predict from. If not provided, will use the data from the original fit.
-#' @param ... Additional arguments to be passed to the predict function of 'predict.cv.oem'
+#' @param ... Additional arguments passed to the predict function of 'predict.cv.oem'
 #' @return Predicted values based on the 'cv.ovganet' object
 #' @export
 predict.cv.ovganet <- function(obj, newx, ...) {
@@ -36,3 +36,4 @@ predict.cv.ovganet <- function(obj, newx, ...) {
 
   return(cv_predictions)
 }
+

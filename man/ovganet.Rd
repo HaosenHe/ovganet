@@ -27,7 +27,7 @@ ovganet(
 
 \item{family}{Use "gaussian" for least squares problems and "binomial" for binary response.}
 
-\item{...}{other parameters to be passed to "cv.ovganet" function.}
+\item{...}{other parameters passed to "cv.ovganet" function.}
 }
 \value{
 An object with S3 class "ovganet".
@@ -36,6 +36,12 @@ An object with S3 class "ovganet".
 Overlapping group elastic net using package 'oem'
 }
 \examples{
+library(doMC)
 library(ovganet)
-overlap_grp_lasso <- ovganet(X = X, y = y, group = group, weights = group_weights, family ='binomial')
+registerDoMC(5)
+data(mtcars)
+X <- as.matrix(mtcars[,-1])
+y <- as.vector(mtcars$mpg)
+group = list(c(1,2), c(2,3), c(3,4,5),c(4,5,6))
+fit <- ovganet(X = X, y = y, group = group, family ='gaussian')
 }

@@ -17,6 +17,3 @@ A sparse matrix with all latent variables included
 \description{
 Create an incidence matrix indicating group membership
 }
-\examples{
-To be filled in.
-}

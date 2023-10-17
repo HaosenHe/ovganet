@@ -1,7 +1,7 @@
 #' Plot method for ovganet plotting (coef. path)
 #'
 #' @param obj An object of class 'ovganet'
-#' @param ... Additional arguments to be passed to the plot function of 'plot.oem'
+#' @param ... Additional arguments passed to the plot function of 'plot.oem'
 #' @export
 plot.ovganet <- function(obj, ...) {
   if (!inherits(obj, "ovganet")) stop("x must be of class 'ovganet'")
@@ -14,7 +14,7 @@ plot.ovganet <- function(obj, ...) {
 #' Plot method for cv.ovganet
 #'
 #' @param obj An object of class 'cv.ovganet'
-#' @param ... Additional arguments to be passed to the plot function of 'plot.cv.oem'
+#' @param ... Additional arguments passed to the plot function of 'plot.cv.oem'
 #' @export
 plot.cv.ovganet <- function(obj, ...) {
   if (!inherits(obj, "cv.ovganet")) stop("obj must be of class 'cv.ovganet'")
@@ -23,3 +23,4 @@ plot.cv.ovganet <- function(obj, ...) {
   oem:::plot.cv.oem(obj, ...)
 
 }
+

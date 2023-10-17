@@ -1,7 +1,7 @@
 #' Summary method for ovganet
 #'
 #' @param obj An obj of class 'ovganet'
-#' @param ... Additional arguments to be passed to the summary function of 'summary.oem'
+#' @param ... Additional arguments passed to the summary function of 'summary.oem'
 #' @return A summary obj for 'ovganet'
 #' @export
 summary.ovganet <- function(obj, ...) {
@@ -20,7 +20,7 @@ summary.ovganet <- function(obj, ...) {
 #' Summary method for cv.ovganet
 #'
 #' @param obj An obj of class 'cv.ovganet'
-#' @param ... Additional arguments to be passed to the summary function of 'summary.cv.oem'
+#' @param ... Additional arguments passed to the summary function of 'summary.cv.oem'
 #' @return A summary obj for 'cv.ovganet'
 #' @export
 summary.cv.ovganet <- function(obj, ...) {
@@ -35,3 +35,4 @@ summary.cv.ovganet <- function(obj, ...) {
 
   return(oem_cv_summary)
 }
+

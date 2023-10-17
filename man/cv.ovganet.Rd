@@ -16,7 +16,7 @@ cv.ovganet(
 )
 }
 \arguments{
-\item{X}{Design matrix (features). Note that the "oem" package we use is optimized for n » p settings.}
+\item{X}{Design matrix (features). Note that the "oem" package we use is optimized for n >> p settings.}
 
 \item{y}{Response vector (outcomes).}
 
@@ -31,7 +31,7 @@ The default is type.measure = "deviance." See package "oem" for more options.}
 
 \item{family}{Use "gaussian" for least squares problems and "binomial" for binary response.}
 
-\item{...}{other parameters to be passed to "cv.ovganet" function.}
+\item{...}{other parameters passed to "cv.ovganet" function.}
 }
 \value{
 An object with S3 class "cv.ovganet".
@@ -43,5 +43,9 @@ Cross-validated overlapping group elastic net using package 'oem'
 library(doMC)
 library(ovganet)
 registerDoMC(5)
-cv_overlap_grp_lasso <- cv.ovganet(X = X, y = y, group = group, weights = group_weights, family ='binomial', parallel = TRUE)
+data(mtcars)
+X <- as.matrix(mtcars[,-1])
+y <- as.vector(mtcars$mpg)
+group = list(c(1,2), c(2,3), c(3,4,5),c(4,5,6))
+cvfit <- cv.ovganet(X = X, y = y, group = group, family ='gaussian')
 }

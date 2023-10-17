@@ -57,8 +57,6 @@ gamma2beta<- function(gamma, incidence.mat, grp.vec, family) {
 #' @param X Design matrix (features).
 #' @param group A list of vectors containing group information.
 #' @return A sparse matrix with all latent variables included
-#' @examples
-#' To be filled in.
 #' @import Matrix
 #' @import oem
 #' @export
@@ -100,3 +98,4 @@ incidenceMat <- function(X, group) {
   }
   grp.mat
 }
+
