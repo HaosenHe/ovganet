@@ -4,10 +4,10 @@
 \alias{predict.cv.ovganet}
 \title{Predict method for cv.ovganet}
 \usage{
-\method{predict}{cv.ovganet}(obj, newx, ...)
+\method{predict}{cv.ovganet}(object, newx, ...)
 }
 \arguments{
-\item{obj}{An object of class 'cv.ovganet'}
+\item{object}{An object of class 'cv.ovganet'}
 
 \item{newx}{New data to predict from. If not provided, will use the data from the original fit.}
 

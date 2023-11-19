@@ -2,7 +2,7 @@
 #'
 #' @param X Design matrix (features).
 #' @param group A list of vectors containing group information.
-#' @return A sparse matrix with all latent variables included
+#' @return A sparse matrix with all latent variables included.
 #' @import Matrix
 #' @import oem
 #' @export
@@ -25,9 +25,9 @@ expandMat <- function(X, group) { # Expand X to augmented matrix with latent var
 
 #' Convert latent variable coefficients (gammas) to variable coefficients (betas)
 #'
-#' @param X Design matrix (features).
-#' @param incidence.mat Incidence matrix
-#' @param grp.vec A vector indicating group membership
+#' @param gamma A vector of latent variable coefficients.
+#' @param incidence.mat Incidence matrix.
+#' @param grp.vec A vector indicating group membership.
 #' @param family "gaussian" for least squares problems and "binomial" for binary response.
 #' @return A vector of lasso coefficients.
 #' @import Matrix
@@ -56,7 +56,7 @@ gamma2beta<- function(gamma, incidence.mat, grp.vec, family) {
 #'
 #' @param X Design matrix (features).
 #' @param group A list of vectors containing group information.
-#' @return A sparse matrix with all latent variables included
+#' @return A sparse matrix with all latent variables included.
 #' @import Matrix
 #' @import oem
 #' @export

@@ -4,15 +4,15 @@
 \alias{summary.cv.ovganet}
 \title{Summary method for cv.ovganet}
 \usage{
-summary.cv.ovganet(obj, ...)
+summary.cv.ovganet(object, ...)
 }
 \arguments{
-\item{obj}{An obj of class 'cv.ovganet'}
+\item{object}{An object of class 'cv.ovganet'}
 
 \item{...}{Additional arguments passed to the summary function of 'summary.cv.oem'}
 }
 \value{
-A summary obj for 'cv.ovganet'
+A summary object for 'cv.ovganet'
 }
 \description{
 Summary method for cv.ovganet

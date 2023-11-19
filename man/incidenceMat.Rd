@@ -12,7 +12,7 @@ incidenceMat(X, group)
 \item{group}{A list of vectors containing group information.}
 }
 \value{
-A sparse matrix with all latent variables included
+A sparse matrix with all latent variables included.
 }
 \description{
 Create an incidence matrix indicating group membership

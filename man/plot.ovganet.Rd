@@ -4,10 +4,10 @@
 \alias{plot.ovganet}
 \title{Plot method for ovganet plotting (coef. path)}
 \usage{
-\method{plot}{ovganet}(obj, ...)
+\method{plot}{ovganet}(x, ...)
 }
 \arguments{
-\item{obj}{An object of class 'ovganet'}
+\item{x}{An object of class 'ovganet'}
 
 \item{...}{Additional arguments passed to the plot function of 'plot.oem'}
 }

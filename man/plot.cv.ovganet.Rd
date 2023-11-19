@@ -4,10 +4,10 @@
 \alias{plot.cv.ovganet}
 \title{Plot method for cv.ovganet}
 \usage{
-\method{plot}{cv.ovganet}(obj, ...)
+\method{plot}{cv.ovganet}(x, ...)
 }
 \arguments{
-\item{obj}{An object of class 'cv.ovganet'}
+\item{x}{An object of class 'cv.ovganet'}
 
 \item{...}{Additional arguments passed to the plot function of 'plot.cv.oem'}
 }

@@ -7,13 +7,13 @@
 gamma2beta(gamma, incidence.mat, grp.vec, family)
 }
 \arguments{
-\item{incidence.mat}{Incidence matrix}
+\item{gamma}{A vector of latent variable coefficients.}
 
-\item{grp.vec}{A vector indicating group membership}
+\item{incidence.mat}{Incidence matrix.}
+
+\item{grp.vec}{A vector indicating group membership.}
 
 \item{family}{"gaussian" for least squares problems and "binomial" for binary response.}
-
-\item{X}{Design matrix (features).}
 }
 \value{
 A vector of lasso coefficients.

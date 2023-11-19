@@ -8,7 +8,7 @@ Description: Performs (overlapping) (group) elastic net regularization
     for linear and binomial models using Orthogonalizing EM with flexible options for
     penalization.
 Depends:
-    R (>= 4.2.2), Matrix, oem, bigmemory
+    R (>= 4.2.0), Matrix, oem, bigmemory
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
